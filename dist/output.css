@@ -555,22 +555,6 @@ video {
   position: relative;
 }
 
-.-top-40 {
-  top: -10rem;
-}
-
-.-top-52 {
-  top: -13rem;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-0 {
-  top: 0px;
-}
-
 .-top-10 {
   top: -2.5rem;
 }
@@ -643,24 +627,12 @@ video {
   width: 16rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-96 {
-  width: 24rem;
-}
-
-.w-\[30rem\] {
-  width: 30rem;
-}
-
-.w-\[60rem\] {
-  width: 60rem;
-}
-
 .w-\[65rem\] {
   width: 65rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .rotate-12 {
