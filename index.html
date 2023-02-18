@@ -11,18 +11,20 @@
     <title>Svadba P&J</title>
 </head>
 <body>
-    <div class="wrapper w-full h-screen flex flex-col items-center bg-[#F8F7F8] text-white relative overflow-hidden font-cinzel">
-        <div class="absolute w-[65rem] -top-0">
+    <div class="wrapper w-full h-screen flex flex-col items-center bg-[#F8F7F8] text-white relative overflow-x-hidden md:overflow-y-hidden font-cinzel">
+        <div class="absolute rotate-[70deg] w-[70rem] -left-[24rem] md:rotate-0 md:w-[65rem] md:-top-0">
             <img src="assets/img/kvet2 3.png" alt="background image flower" srcset="">
         </div>
-        <div class="container h-full z-10">
-            <div class="columns--1 flex justify-center items-center gap-4 h-full">
+        <div class="container h-full z-10 flex flex-col items-center">
+
+            <!-- DESKTOP -->
+            <div class="columns--1 hidden md:flex justify-center items-center gap-4 h-full">
                 <div class="rows--2 flex flex-col gap-4 items-end mt-12">
                     <div class="item drop-shadow-custom w-32 rounded-full flex flex-col gap-2 justify-center items-center text-center mr-28 bg-[#6C5C44] border border-[#554937] font-msmadi p-2">
                         <h2 class="text-2xl leading-6">Fotky<br>zo svadby</h2>
                         <img class="w-6" src="assets/icons/camera icon.svg" alt="camera icon" srcset="">
                     </div>
-                    <div class="item drop-shadow-custom w-40 rounded-t-[3.5rem] rounded-b-xl flex flex-col justify-center items-center text-center bg-white text-[#6C5C44] border border-[#FFF6F5] p-4">
+                    <div class="item drop-shadow-custom rounded-t-[3.5rem] rounded-b-xl flex flex-col justify-center items-center text-center bg-white text-[#6C5C44] border border-[#FFF6F5] py-2 px-8">
                         <h1 class="text-4xl">PAVOL</h1>
                         <img src="assets/icons/rings icon.svg" alt="rings icon" srcset="">
                         <h1 class="text-4xl">JANKA</h1>
@@ -64,6 +66,53 @@
                     </div>
                 </div>
             </div>
+
+            <!-- MOBILE -->
+            <div class="columns--1 flex flex-col md:hidden items-center gap-8 h-full mt-12 max-w-[350px]">
+                <div class="item drop-shadow-custom rounded-t-[3.5rem] rounded-b-xl flex flex-col justify-center items-center self-start text-center bg-white text-[#6C5C44] border border-[#FFF6F5] py-2 px-8 ml-4">
+                    <h1 class="text-4xl">PAVOL</h1>
+                    <img src="assets/icons/rings icon.svg" alt="rings icon" srcset="">
+                    <h1 class="text-4xl">JANKA</h1>
+                </div>
+                <div class="item drop-shadow-custom rounded-full flex flex-col justify-center items-center self-end text-center bg-[#A1C1BB] border border-[#99B3AE] gap-2 px-8 py-14">
+                    <div class="flex justify-center items-center gap-4">
+                        <h2 class="text-3xl">1.7.2023</h2>
+                        <img src="assets/icons/calendar icon.svg" alt="" srcset="">
+                    </div>
+                    <div class="flex justify-center items-center gap-4">
+                        <h3 class="text-sm text-right w-24">Kostol sv. Františka v Báhoni</h3>
+                        <img src="assets/icons/Subtract.svg" alt="" srcset="">
+                    </div>
+                    <div class="flex justify-center items-center gap-4">
+                        <h3 class="text-sm text-right w-24">Penzión na Majeri</h3>
+                        <img src="assets/icons/Subtract.svg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="item drop-shadow-custom w-32 rounded-full flex flex-col gap-2 justify-center items-center text-center mr-16 bg-[#6C5C44] border border-[#554937] font-msmadi p-2 self-end">
+                    <h2 class="text-2xl leading-6">Fotky<br>zo svadby</h2>
+                    <img class="w-6" src="assets/icons/camera icon.svg" alt="camera icon" srcset="">
+                </div>
+                <div class="flex items-end justify-between">
+                    <div class="item drop-shadow-custom rounded-b-[4rem] rounded-tr-3xl rounded-tl-[6rem] flex flex-col justify-center items-center text-center rotate-12 bg-[#A1C1BB] border border-[#99B3AE] p-6">
+                        <div class="content -rotate-12 flex flex-col items-center">
+                            <h2 class="text-3xl font-msmadi">Tip na darček</h2>
+                            <p class="w-40 text-sm">Chcete nám darovať niečo, čo vás nám bude pripomínať?</p>
+                            <img class="w-6" src="assets/icons/present icon.svg" alt="present icon" srcset="">
+                        </div>
+                    </div>
+                    <div class="item drop-shadow-custom rounded-full flex flex-col justify-center items-center text-center bg-white text-[#6C5C44] border border-[#FFF6F5] font-msmadi py-2 px-4">
+                        <h2 class="text-2xl leading-6 w-28">Chcem potvrdiť účasť</h2>
+                        <img class="w-5" src="assets/icons/notes icon.svg" alt="camera icon" srcset="">
+                    </div>
+                </div>
+                <div class="item drop-shadow-custom rounded-b-[6rem] rounded-t-2xl flex flex-col justify-center items-center text-center w-full bg-[#6C5C44] border border-[#554937] py-8">
+                    <div class="flex items-center gap-4">
+                        <h3 class="w-36">V čom bude náš svadobný deň výnimočný?</h3>
+                        <img src="assets/icons/heart icon.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
