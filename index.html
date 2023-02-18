@@ -12,24 +12,26 @@
 </head>
 <body>
     <div class="wrapper w-full h-screen flex flex-col items-center bg-[#F8F7F8] text-white relative overflow-x-hidden md:overflow-y-hidden font-cinzel">
-        <div class="absolute rotate-[70deg] w-[70rem] -left-[24rem] md:left-1/2 md:rotate-0 md:w-[65rem] md:-top-0 md:-translate-x-1/2">
+
+        <div class="absolute rotate-[70deg] w-[70rem] -left-[24rem] md:left-1/2 md:rotate-0 md:w-[80rem] md:-top-16 md:-translate-x-1/2">
             <img src="assets/img/kvet2 3.png" alt="background image flower" srcset="">
         </div>
-        <div class="container h-full z-10 flex flex-col items-center">
+
+        <div class="container h-full z-10 flex flex-col items-center transition-opacity ease-in-out duration-300 opacity-100">
 
             <!-- DESKTOP -->
             <div class="columns--1 hidden md:flex justify-center items-center gap-4 h-full">
                 <div class="rows--2 flex flex-col gap-4 items-end mt-12">
-                    <div class="item drop-shadow-custom w-32 rounded-full flex flex-col gap-2 justify-center items-center text-center mr-28 bg-[#6C5C44] border border-[#554937] font-msmadi p-2">
+                    <div class="item photos-item drop-shadow-custom w-32 rounded-full flex flex-col gap-2 justify-center items-center text-center mr-28 bg-[#6C5C44] border border-[#554937] font-msmadi p-2 cursor-pointer">
                         <h2 class="text-2xl leading-6">Fotky<br>zo svadby</h2>
                         <img class="w-6" src="assets/icons/camera icon.svg" alt="camera icon" srcset="">
                     </div>
-                    <div class="item drop-shadow-custom rounded-t-[3.5rem] rounded-b-xl flex flex-col justify-center items-center text-center bg-white text-[#6C5C44] border border-[#FFF6F5] py-2 px-8">
+                    <div class="item image-item drop-shadow-custom rounded-t-[3.5rem] rounded-b-xl flex flex-col justify-center items-center text-center bg-white text-[#6C5C44] border border-[#FFF6F5] py-2 px-8 cursor-pointer">
                         <h1 class="text-4xl">PAVOL</h1>
                         <img src="assets/icons/rings icon.svg" alt="rings icon" srcset="">
                         <h1 class="text-4xl">JANKA</h1>
                     </div>
-                    <div class="item drop-shadow-custom rounded-b-[4rem] rounded-tr-3xl rounded-tl-[6rem] flex flex-col justify-center items-center text-center rotate-12 mr-28 bg-[#A1C1BB] border border-[#99B3AE] p-6">
+                    <div class="item gifts-item drop-shadow-custom rounded-b-[4rem] rounded-tr-3xl rounded-tl-[6rem] flex flex-col justify-center items-center text-center rotate-12 mr-28 bg-[#A1C1BB] border border-[#99B3AE] p-6 cursor-pointer">
                         <div class="content -rotate-12 flex flex-col items-center">
                             <h2 class="text-3xl font-msmadi">Tip na darček</h2>
                             <p class="w-40 text-sm">Chcete nám darovať niečo, čo vás nám bude pripomínať?</p>
@@ -39,7 +41,7 @@
                 </div>
                 <div class="rows--2 flex flex-col gap-28">
                     <div class="columns--3 flex gap-4 items-end">
-                        <div class="item drop-shadow-custom rounded-full flex flex-col justify-center items-center text-center bg-[#A1C1BB] border border-[#99B3AE] gap-2 px-8 py-14">
+                        <div class="item date-item drop-shadow-custom rounded-full flex flex-col justify-center items-center text-center bg-[#A1C1BB] border border-[#99B3AE] gap-2 px-8 py-14 cursor-pointer">
                             <div class="flex justify-center items-center gap-4">
                                 <h2 class="text-3xl">1.7.2023</h2>
                                 <img src="assets/icons/calendar icon.svg" alt="" srcset="">
@@ -53,12 +55,12 @@
                                 <img src="assets/icons/Subtract.svg" alt="" srcset="">
                             </div>
                         </div>
-                        <div class="item drop-shadow-custom rounded-full flex flex-col justify-center items-center text-center ml-10 bg-white text-[#6C5C44] border border-[#FFF6F5] font-msmadi py-2 px-4">
+                        <div class="item attendance-item drop-shadow-custom rounded-full flex flex-col justify-center items-center text-center ml-10 bg-white text-[#6C5C44] border border-[#FFF6F5] font-msmadi py-2 px-4 cursor-pointer">
                             <h2 class="text-2xl leading-6 w-28">Chcem potvrdiť účasť</h2>
                             <img class="w-5" src="assets/icons/notes icon.svg" alt="camera icon" srcset="">
                         </div>
                     </div>
-                    <div class="item drop-shadow-custom rounded-b-[6rem] rounded-t-2xl flex flex-col justify-center items-center text-center ml-20 bg-[#6C5C44] border border-[#554937] py-8">
+                    <div class="item informations-item drop-shadow-custom rounded-b-[6rem] rounded-t-2xl flex flex-col justify-center items-center text-center ml-20 bg-[#6C5C44] border border-[#554937] py-8 cursor-pointer">
                         <div class="flex items-center gap-4">
                             <h3 class="w-36">V čom bude náš svadobný deň výnimočný?</h3>
                             <img src="assets/icons/heart icon.svg" alt="" srcset="">
@@ -69,12 +71,12 @@
 
             <!-- MOBILE -->
             <div class="columns--1 flex flex-col md:hidden items-center gap-8 h-full mt-12 max-w-[350px]">
-                <div class="item drop-shadow-custom rounded-t-[3.5rem] rounded-b-xl flex flex-col justify-center items-center self-start text-center bg-white text-[#6C5C44] border border-[#FFF6F5] py-2 px-8 ml-4">
+                <div class="item image-item drop-shadow-custom rounded-t-[3.5rem] rounded-b-xl flex flex-col justify-center items-center self-start text-center bg-white text-[#6C5C44] border border-[#FFF6F5] py-2 px-8 ml-4 cursor-pointer">
                     <h1 class="text-4xl">PAVOL</h1>
                     <img src="assets/icons/rings icon.svg" alt="rings icon" srcset="">
                     <h1 class="text-4xl">JANKA</h1>
                 </div>
-                <div class="item drop-shadow-custom rounded-full flex flex-col justify-center items-center self-end text-center bg-[#A1C1BB] border border-[#99B3AE] gap-2 px-8 py-14">
+                <div class="item date-item drop-shadow-custom rounded-full flex flex-col justify-center items-center self-end text-center bg-[#A1C1BB] border border-[#99B3AE] gap-2 px-8 py-14 cursor-pointer">
                     <div class="flex justify-center items-center gap-4">
                         <h2 class="text-3xl">1.7.2023</h2>
                         <img src="assets/icons/calendar icon.svg" alt="" srcset="">
@@ -88,24 +90,24 @@
                         <img src="assets/icons/Subtract.svg" alt="" srcset="">
                     </div>
                 </div>
-                <div class="item drop-shadow-custom w-32 rounded-full flex flex-col gap-2 justify-center items-center text-center mr-16 bg-[#6C5C44] border border-[#554937] font-msmadi p-2 self-end">
+                <div class="item photos-item drop-shadow-custom w-32 rounded-full flex flex-col gap-2 justify-center items-center text-center mr-16 bg-[#6C5C44] border border-[#554937] font-msmadi p-2 self-end cursor-pointer">
                     <h2 class="text-2xl leading-6">Fotky<br>zo svadby</h2>
                     <img class="w-6" src="assets/icons/camera icon.svg" alt="camera icon" srcset="">
                 </div>
                 <div class="flex items-end justify-between">
-                    <div class="item drop-shadow-custom rounded-b-[4rem] rounded-tr-3xl rounded-tl-[6rem] flex flex-col justify-center items-center text-center rotate-12 bg-[#A1C1BB] border border-[#99B3AE] py-6 px-4 pr-2">
+                    <div class="item gifts-item drop-shadow-custom rounded-b-[4rem] rounded-tr-3xl rounded-tl-[6rem] flex flex-col justify-center items-center text-center rotate-12 bg-[#A1C1BB] border border-[#99B3AE] py-6 px-4 pr-2 cursor-pointer">
                         <div class="content -rotate-12 flex flex-col items-center">
                             <h2 class="text-3xl font-msmadi">Tip na darček</h2>
                             <p class="w-40 text-sm">Chcete nám darovať niečo, čo vás nám bude pripomínať?</p>
                             <img class="w-6" src="assets/icons/present icon.svg" alt="present icon" srcset="">
                         </div>
                     </div>
-                    <div class="item drop-shadow-custom rounded-full flex flex-col justify-center items-center text-center bg-white text-[#6C5C44] border border-[#FFF6F5] font-msmadi py-2 px-2">
+                    <div class="item attendance-item drop-shadow-custom rounded-full flex flex-col justify-center items-center text-center bg-white text-[#6C5C44] border border-[#FFF6F5] font-msmadi py-2 px-2 cursor-pointer">
                         <h2 class="text-2xl leading-6 w-28">Chcem potvrdiť účasť</h2>
                         <img class="w-5" src="assets/icons/notes icon.svg" alt="camera icon" srcset="">
                     </div>
                 </div>
-                <div class="item drop-shadow-custom rounded-b-[6rem] rounded-t-2xl flex flex-col justify-center items-center text-center w-full bg-[#6C5C44] border border-[#554937] py-8">
+                <div class="item informations-item drop-shadow-custom rounded-b-[6rem] rounded-t-2xl flex flex-col justify-center items-center text-center w-full bg-[#6C5C44] border border-[#554937] py-8 cursor-pointer">
                     <div class="flex items-center gap-4">
                         <h3 class="w-36">V čom bude náš svadobný deň výnimočný?</h3>
                         <img src="assets/icons/heart icon.svg" alt="" srcset="">
@@ -114,6 +116,212 @@
             </div>
 
         </div>
+
+        <div class="hidden opacity-0 date-opened-item overlay fixed w-full h-full bg-[rgba(108,92,68,0.2)] z-20 flex justify-center items-center transition-opacity ease-in-out duration-300">
+            <div class="opened-item w-[30rem] h-[90%] max-h-screen bg-[#A1C1BB] rounded-full flex flex-col items-center mx-4 pt-24 pb-24 px-20 gap-4 overflow-y-scroll scrollbar-hide border border-[#99B3AE] drop-shadow-custom">
+                <div class="row flex gap-4 sm:self-end mb-10">
+                    <p class="text-4xl">1.7.2023</p>
+                    <img src="assets/icons/calendar icon.svg" alt="" srcset="">
+                </div>
+                <div class="row flex gap-4 w-full flex-col-reverse items-center sm:flex-row sm:items-start mb-4 sm:mb-0">
+                    <iframe class="w-full sm:w-48 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21229.766596821104!2d17.410181879101565!3d48.3082205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c9eda0b91c68f%3A0xc8c80bbb148f3383!2sFarsk%C3%BD%20kostol%20sv.%20Franti%C5%A1ka%20z%20Assisi!5e0!3m2!1ssk!2ssk!4v1676735522790!5m2!1ssk!2ssk" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p class="text-xl text-center sm:text-right sm:w-32">Kostol sv. Františka v Báhon</p>
+                </div>
+                <iframe class="w-full rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.307761183077!2d17.459414727316098!3d48.29693208162752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c9eee8c4f2eff%3A0xe235f5f4c81151a9!2sPenzi%C3%B3n%20na%20Majeri!5e0!3m2!1ssk!2ssk!4v1676735742538!5m2!1ssk!2ssk" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="http://penzionnamajeri-kaplna.sk">penzionnamajeri-kaplna.sk</a>
+            </div>
+        </div>
+
+        <div class="hidden opacity-0 attendance-opened-item overlay fixed w-full h-full bg-[rgba(108,92,68,0.2)] z-20 flex justify-center items-center transition-opacity ease-in-out duration-300">
+            <div class="opened-item w-[50rem] h-[90%] max-h-screen bg-white rounded-full flex flex-col items-center justify-between mx-4 pt-24 pb-24 px-4 sm:px-24 gap-4 border border-[#FFF6F5] drop-shadow-custom text-[#6C5C44] font-msmadi">
+                <p class="text-5xl text-center pb-10 sm:pb-0">Chcem potvrdiť účasť</p>
+                <table class="table-auto font-cinzel border-collapse text-center overflow-y-scroll scrollbar-hide block">
+                    <thead class="font-msmadi text-4xl">
+                        <tr>
+                            <th class="border border-r-0 border-[#6C5C44]">Meno</th>
+                            <th class="border border-l-0 border-[#6C5C44]"></th>
+                            <th class="border border-[#6C5C44] sm:w-32">Počet ľudí</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-2xl">
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Záleskí</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Feketoví</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]">3</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Hradskí (Janko)</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]">3</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Grossmannoví (Andrej)</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">šarmíroví</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Pavlíkoví</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]">3</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Pavlíkoví</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]">3</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Pavlíkoví</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]">3</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                <p class="text-5xl text-center">Tešíme sa na vás!</p>
+            </div>
+        </div>
+        
+        <div class="hidden opacity-0 photos-opened-item date-opened-item overlay fixed w-full h-full bg-[rgba(108,92,68,0.2)] z-20 flex justify-center items-center transition-opacity ease-in-out duration-300">
+            <div class="opened-item w-[60rem] h-[90%] max-h-screen bg-[#554937] rounded-full flex flex-col items-center justify-between mx-4 pt-24 pb-24 gap-4 overflow-y-scroll scrollbar-hide border border-[#554937] drop-shadow-custom font-msmadi">
+                <p class="text-5xl text-centerpx-6">Chcem potvrdiť účasť</p>
+                <img class="hidden sm:block" src="assets/icons/photo frames.svg" alt="" srcset="">
+                <img class="sm:hidden" src="assets/icons/photo frames small.svg" alt="" srcset="">
+                <p class="text-5xl text-center px-6">...tu nájdete po svadbe!</p>
+                <img class="w-16 sm:w-20" src="assets/icons/camera icon.svg" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="hidden opacity-0 image-opened-item overlay fixed w-full h-full bg-[rgba(108,92,68,0.2)] z-20 flex justify-center items-center transition-opacity ease-in-out duration-300">
+            <div class="opened-item w-[50rem] h-[70%] sm:h-[90%] max-h-screen bg-white rounded-t-[20rem] rounded-b-3xl mx-4 overflow-y-scroll scrollbar-hide border border-[#FFF6F5] drop-shadow-custom p-4">
+                <!-- <div class="image bg-[url('/assets/img/oz-1.jpg')] bg-cover w-full h-full rounded-t-[19rem] rounded-b-3xl"></div> -->
+                <img class="h-full w-auto rounded-t-[19rem] rounded-b-3xl object-cover" src="assets/img/oz-1.jpg" alt="" srcset="">
+            </div>
+        </div>
+        
+        <div class="hidden opacity-0 informations-opened-item overlay fixed w-full h-full bg-[rgba(108,92,68,0.2)] z-20 flex justify-center items-center transition-opacity ease-in-out duration-300">
+            <div class="opened-item w-[60rem] h-[80%] sm:h-[60%] max-h-screen bg-[#6C5C44] rounded-t-3xl rounded-b-[20rem] mx-4 flex flex-col items-center overflow-y-scroll scrollbar-hide border border-[#554937] drop-shadow-custom p-8">
+                <p class="text-2xl text-center">V čom bude náš svadobný deň výnimočný?</p>
+            </div>
+        </div>
+
+        <div class="hidden opacity-0 gifts-opened-item overlay fixed w-full h-full bg-[rgba(108,92,68,0.2)] z-20 flex justify-center items-center transition-opacity ease-in-out duration-300">
+            <div class="opened-item w-[40rem] h-[90%] max-h-screen bg-[#C4DFDB] rounded-b-[10rem] rounded-tr-[10rem] rounded-tl-[20rem] flex flex-col items-center justify-between mx-4 py-12 px-4 sm:px-24 gap-4 border border-[#99B3AE] drop-shadow-custom text-white font-msmadi">
+                <p class="text-5xl text-center pt-10 sm:pt-0 mx-20">Tip na darček</p>
+                <p class="text-xl text-center font-cinzel mx-20">Chcete nám darovať niečo, čo vás nám bude pripomínať? </p>
+                <table class="table-auto w-full font-cinzel border-collapse text-center overflow-y-scroll scrollbar-hide block text-[#6C5C44] bg-white">
+                    <thead class="font-msmadi text-4xl">
+                        <tr>
+                            <th class="border border-r-0 border-[#6C5C44]">Meno</th>
+                            <th class="border border-l-0 border-[#6C5C44]"></th>
+                            <th class="border border-[#6C5C44] sm:w-32">Počet ľudí</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-2xl">
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Záleskí</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Feketoví</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]">3</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Hradskí (Janko)</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]">3</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Grossmannoví (Andrej)</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">šarmíroví</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]"></td>
+                        </tr>
+                        <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">Pavlíkoví</td>
+                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
+                            <td class="border border-[#6C5C44]">3</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                <p class="text-5xl text-center">Tešíme sa na vás!</p>
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        const date = document.querySelectorAll(".date-item");
+        const attendance = document.querySelectorAll(".attendance-item");
+        const photos = document.querySelectorAll(".photos-item");
+        const image = document.querySelectorAll(".image-item");
+        const informations = document.querySelectorAll(".informations-item");
+        const gifts = document.querySelectorAll(".gifts-item");
+
+        const array = [date, attendance, photos, image, informations, gifts];
+
+        const opened_date = document.querySelector(".date-opened-item");
+        const opened_attendance = document.querySelector(".attendance-opened-item");
+        const opened_photos = document.querySelector(".photos-opened-item");
+        const opened_image = document.querySelector(".image-opened-item");
+        const opened_informations = document.querySelector(".informations-opened-item");
+        const opened_gifts = document.querySelector(".gifts-opened-item");
+
+        const opened_array = [opened_date, opened_attendance, opened_photos, opened_image, opened_informations, opened_gifts];
+
+        const container = document.querySelector(".container");
+        
+        let opened_modal = null;
+
+        document.addEventListener('click', (event)=>{
+            if(opened_modal) {
+                if (!event.target.closest(".opened-item")){
+                    opened_modal.classList.remove("opacity-100");
+                    setTimeout(() => {
+                        opened_modal.classList.add("hidden");
+                        opened_modal = null;
+                    }, 300);
+                    container.classList.remove('opacity-0');
+                    container.classList.add('opacity-100');
+                }
+            }
+        });
+
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            const opened = opened_array[index];
+            elements = Array.prototype.slice.call(element,0);
+            elements.forEach((e)=>{
+                e.addEventListener('click', ()=>{
+                    if(opened.classList.contains('hidden')) {
+                        opened.classList.remove("hidden");
+                        container.classList.remove('opacity-100');
+                        container.classList.add('opacity-0');
+                        setTimeout(() => {
+                            opened.classList.add("opacity-100");
+                            opened_modal = opened;
+                        }, 10);
+                    }
+                });
+            });
+        }
+
+
+
+    </script>
 </body>
 </html>
