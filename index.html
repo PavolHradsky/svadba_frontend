@@ -301,6 +301,19 @@
             }
         });
 
+        addEventListener('hashchange', (event) => {
+            console.log("hash changed");
+            if(opened_modal) {
+                opened_modal.classList.remove("opacity-100");
+                setTimeout(() => {
+                    opened_modal.classList.add("hidden");
+                    opened_modal = null;
+                }, 300);
+                container.classList.remove('opacity-0');
+                container.classList.add('opacity-100');
+            }
+        });
+
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
             const opened = opened_array[index];
@@ -315,6 +328,7 @@
                             opened.classList.add("opacity-100");
                             opened_modal = opened;
                         }, 10);
+                        window.location.hash = "modal";
                     }
                 });
             });
