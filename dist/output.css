@@ -998,6 +998,10 @@ video {
     top: -0px;
   }
 
+  .md\:left-0 {
+    left: 0px;
+  }
+
   .md\:block {
     display: block;
   }
