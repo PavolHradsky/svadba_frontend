@@ -713,10 +713,6 @@ video {
   width: 100%;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
 .max-w-\[350px\] {
   max-width: 350px;
 }
@@ -1146,6 +1142,11 @@ video {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+input.error {
+  border: 2px solid #FC826D;
+  border-radius: 5px;
 }
 
 @media (min-width: 640px) {

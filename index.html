@@ -299,12 +299,16 @@
 
         function change_person(person) {
             const person_id = person.id;
-            const row = person.parentElement.parentElement;
-            const checkbox = row.querySelector("input[type=checkbox]");
-            const text = row.querySelector("input[type=text]");
-            // console.log(checkbox);
-            // console.log(text);
             $.ajax({url: `https://squid-app-tljtj.ondigitalocean.app/change_person/${person_id}`, success: function(result){
+                people = JSON.parse(result);
+                update_people();
+            }});
+        }
+
+        function change_person_count(person) {
+            const person_id = person.id;
+            const count = person.value ? person.value : 0;
+            $.ajax({url: `https://squid-app-tljtj.ondigitalocean.app/change_person_count/${person_id}/${count}`, success: function(result){
                 people = JSON.parse(result);
                 update_people();
             }});
@@ -334,18 +338,12 @@
                                         <input type="checkbox" name="" id="${e.id}" ${e.confirmed ? "checked" : ""} onchange="change_person(this)">
                                     </td>
                                     <td class="border border-[#6C5C44]">
-                                        <input class="max-w-[5rem] text-center" type="text" id="${e.id}" value="${e.count}" onfocusout="change_person(this)">
+                                        <input class="max-w-[5rem] text-center ${e.confirmed && !e.count ? "error": ""}" type="text" id="${e.id}" value="${e.count ? e.count : ""}" onchange="change_person_count(this)">
                                     </td>
                                 </tr>`;
             });
             table.innerHTML = template;
         }
-
-        function event_listeners_on_items(){
-            let table = document.querySelector(".gifts-opened-item table tbody");
-            let checkboxes = table.querySelectorAll("")
-        }
-
 
     </script>
 </body>

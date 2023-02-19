@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input.error {
+    border: 2px solid #FC826D;
+    border-radius: 5px;
+}
