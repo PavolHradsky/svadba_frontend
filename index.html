@@ -8,7 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Ms+Madi&display=swap" rel="stylesheet">
-    <title>Svadba P&J</title>
+    <script type = "text/javascript" 
+        src = "https://www.tutorialspoint.com/jquery/jquery-3.6.0.js">
+    </script>
+    <title>Svadba J&P</title>
 </head>
 <body>
     <div class="wrapper w-full h-screen flex flex-col items-center bg-[#F8F7F8] text-white relative overflow-x-hidden md:overflow-y-hidden font-cinzel">
@@ -144,46 +147,11 @@
                         </tr>
                     </thead>
                     <tbody class="text-2xl">
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Záleskí</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]"></td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Feketoví</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]">3</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Hradskí (Janko)</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]">3</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Grossmannoví (Andrej)</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]"></td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">šarmíroví</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]"></td>
-                        </tr>
-                        <tr>
+                        <!-- <tr>
                             <td class="border border-r-0 border-[#6C5C44]">Pavlíkoví</td>
                             <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]">3</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Pavlíkoví</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]">3</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Pavlíkoví</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]">3</td>
-                        </tr>
+                            <td class="border border-[#6C5C44]"> <input type="text" value="3"> </td>
+                        </tr> -->
                     </tbody>
                   </table>
                 <p class="text-5xl text-center">Tešíme sa na vás!</p>
@@ -192,7 +160,7 @@
         
         <div class="hidden opacity-0 photos-opened-item date-opened-item overlay fixed w-full h-full bg-[rgba(108,92,68,0.2)] z-20 flex justify-center items-center transition-opacity ease-in-out duration-300">
             <div class="opened-item w-[60rem] h-[90%] max-h-screen bg-[#554937] rounded-full flex flex-col items-center justify-between mx-4 pt-24 pb-24 gap-4 overflow-y-scroll scrollbar-hide border border-[#554937] drop-shadow-custom font-msmadi">
-                <p class="text-5xl text-centerpx-6">Chcem potvrdiť účasť</p>
+                <p class="text-5xl text-centerpx-6">Fotky zo svadby...</p>
                 <img class="hidden sm:block" src="assets/icons/photo frames.svg" alt="" srcset="">
                 <img class="sm:hidden" src="assets/icons/photo frames small.svg" alt="" srcset="">
                 <p class="text-5xl text-center px-6">...tu nájdete po svadbe!</p>
@@ -218,44 +186,17 @@
                 <p class="text-5xl text-center pt-10 sm:pt-0 mx-20">Tip na darček</p>
                 <p class="text-xl text-center font-cinzel mx-20">Chcete nám darovať niečo, čo vás nám bude pripomínať? </p>
                 <table class="table-auto w-full font-cinzel border-collapse text-center overflow-y-scroll scrollbar-hide block text-[#6C5C44] bg-white">
-                    <thead class="font-msmadi text-4xl">
+                    <thead class="font-msmadi text-2xl">
                         <tr>
-                            <th class="border border-r-0 border-[#6C5C44]">Meno</th>
-                            <th class="border border-l-0 border-[#6C5C44]"></th>
-                            <th class="border border-[#6C5C44] sm:w-32">Počet ľudí</th>
+                            <th class="border border-r-0 border-[#6C5C44] w-full">Položka</th>
+                            <th class="border border-l-0 border-[#6C5C44] w-full px-2">Voľné/obsadené</th>
                         </tr>
                     </thead>
                     <tbody class="text-2xl">
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Záleskí</td>
+                        <!-- <tr>
+                            <td class="border border-r-0 border-[#6C5C44]">utierky na riad</td>
                             <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]"></td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Feketoví</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]">3</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Hradskí (Janko)</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]">3</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Grossmannoví (Andrej)</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]"></td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">šarmíroví</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]"></td>
-                        </tr>
-                        <tr>
-                            <td class="border border-r-0 border-[#6C5C44]">Pavlíkoví</td>
-                            <td class="border border-l-0 border-[#6C5C44] px-4 py-2"><input type="checkbox" name="" id=""></td>
-                            <td class="border border-[#6C5C44]">3</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                   </table>
                 <p class="text-5xl text-center">Tešíme sa na vás!</p>
@@ -289,24 +230,26 @@
 
         document.addEventListener('click', (event)=>{
             if(opened_modal) {
+                let modal = opened_modal;
                 if (!event.target.closest(".opened-item")){
-                    opened_modal.classList.remove("opacity-100");
+                    modal.classList.remove("opacity-100");
                     setTimeout(() => {
-                        opened_modal.classList.add("hidden");
+                        modal.classList.add("hidden");
                         opened_modal = null;
                     }, 300);
                     container.classList.remove('opacity-0');
                     container.classList.add('opacity-100');
+                    window.location.hash = "";
                 }
             }
         });
 
         addEventListener('hashchange', (event) => {
-            console.log("hash changed");
             if(opened_modal) {
-                opened_modal.classList.remove("opacity-100");
+                let modal = opened_modal;
+                modal.classList.remove("opacity-100");
                 setTimeout(() => {
-                    opened_modal.classList.add("hidden");
+                    modal.classList.add("hidden");
                     opened_modal = null;
                 }, 300);
                 container.classList.remove('opacity-0');
@@ -334,6 +277,74 @@
             });
         }
 
+        items = {};
+        $.ajax({url: "https://squid-app-tljtj.ondigitalocean.app/items", success: function(result){
+            items = JSON.parse(result);
+            update_items();
+        }});
+
+        people = {};
+        $.ajax({url: "https://squid-app-tljtj.ondigitalocean.app/people", success: function(result){
+            people = JSON.parse(result);
+            update_people();
+        }});
+
+        function change_item(item) {
+            const item_id = item.id;
+            $.ajax({url: `https://squid-app-tljtj.ondigitalocean.app/change_item/${item_id}`, success: function(result){
+                items = JSON.parse(result);
+                update_items();
+            }});
+        }
+
+        function change_person(person) {
+            const person_id = person.id;
+            const row = person.parentElement.parentElement;
+            const checkbox = row.querySelector("input[type=checkbox]");
+            const text = row.querySelector("input[type=text]");
+            // console.log(checkbox);
+            // console.log(text);
+            $.ajax({url: `https://squid-app-tljtj.ondigitalocean.app/change_person/${person_id}`, success: function(result){
+                people = JSON.parse(result);
+                update_people();
+            }});
+        }
+
+        function update_items() {
+            let table = document.querySelector(".gifts-opened-item table tbody");
+            let template = "";
+            items.forEach(e => {
+                template += `<tr>
+                                <td class="border border-r-0 border-[#6C5C44]">${e.name}</td>
+                                <td class="border border-l-0 border-[#6C5C44] px-4 py-2">
+                                    <input type="checkbox" name="" id="${e.id}" ${e.assigned ? "checked" : ""} onchange="change_item(this)">
+                                </td>
+                            </tr>`
+            });
+            table.innerHTML = template;
+        }
+
+        function update_people() {
+            let table = document.querySelector(".attendance-opened-item table tbody");
+            let template = "";
+            people.forEach(e => {
+                template += `   <tr>
+                                    <td class="border border-r-0 border-[#6C5C44]">${e.name}</td>
+                                    <td class="border border-l-0 border-[#6C5C44] px-4 py-2">
+                                        <input type="checkbox" name="" id="${e.id}" ${e.confirmed ? "checked" : ""} onchange="change_person(this)">
+                                    </td>
+                                    <td class="border border-[#6C5C44]">
+                                        <input class="max-w-[5rem] text-center" type="text" id="${e.id}" value="${e.count}" onfocusout="change_person(this)">
+                                    </td>
+                                </tr>`;
+            });
+            table.innerHTML = template;
+        }
+
+        function event_listeners_on_items(){
+            let table = document.querySelector(".gifts-opened-item table tbody");
+            let checkboxes = table.querySelectorAll("")
+        }
 
 
     </script>
