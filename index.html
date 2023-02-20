@@ -247,7 +247,7 @@
                     setTimeout(() => {
                         modal.classList.add("hidden");
                         opened_modal = null;
-                        window.location.href = window.location.href.split('#')[0];
+                        window.location.hash = "";
                     }, 300);
                     container.classList.remove('opacity-0');
                     container.classList.add('opacity-100');
