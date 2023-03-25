@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'cinzel': ['Cinzel', 'serif'],
         'msmadi': ['Ms Madi', 'cursive'],
+      },
+      screens: {
+        'xs': '400px'
       }
     },
   },

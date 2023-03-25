@@ -517,6 +517,12 @@ video {
   width: 100%;
 }
 
+@media (min-width: 400px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -592,6 +598,11 @@ video {
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .-ml-2 {
@@ -1332,6 +1343,13 @@ input.error {
 .hover\:bg-\[\#FFF6F5\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 246 245 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 400px) {
+  .xs\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 }
 
 @media (min-width: 640px) {
