@@ -239,13 +239,13 @@
         const opened_array = [opened_date, opened_attendance, opened_photos, opened_image, opened_informations, opened_gifts];
 
         const container = document.querySelector(".container");
-        
+
         let opened_modal = null;
 
-        document.addEventListener('click', (event)=>{
-            if(opened_modal) {
+        document.addEventListener('click', (event) => {
+            if (opened_modal) {
                 let modal = opened_modal;
-                if (!event.target.closest(".opened-item")){
+                if (!event.target.closest(".opened-item")) {
                     modal.classList.remove("opacity-100");
                     setTimeout(() => {
                         modal.classList.add("hidden");
@@ -259,7 +259,7 @@
         });
 
         addEventListener('hashchange', (event) => {
-            if(opened_modal) {
+            if (opened_modal) {
                 let modal = opened_modal;
                 modal.classList.remove("opacity-100");
                 setTimeout(() => {
@@ -274,10 +274,10 @@
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
             const opened = opened_array[index];
-            elements = Array.prototype.slice.call(element,0);
-            elements.forEach((e)=>{
-                e.addEventListener('click', ()=>{
-                    if(opened.classList.contains('hidden')) {
+            elements = Array.prototype.slice.call(element, 0);
+            elements.forEach((e) => {
+                e.addEventListener('click', () => {
+                    if (opened.classList.contains('hidden')) {
                         opened.classList.remove("hidden");
                         container.classList.remove('opacity-100');
                         container.classList.add('opacity-0');
@@ -291,53 +291,424 @@
             });
         }
 
-        items = {};
-        $.ajax({url: "https://squid-app-tljtj.ondigitalocean.app/items", success: function(result){
-            items = JSON.parse(result);
-            update_items();
-        }});
+        items = [
+            {
+                "id": 16,
+                "name": "nádoby na korenie",
+                "assigned": true
+            },
+            {
+                "id": 27,
+                "name": "plachta na posteľ (160x200)",
+                "assigned": true
+            },
+            {
+                "id": 17,
+                "name": "plech na muffinky",
+                "assigned": true
+            },
+            {
+                "id": 26,
+                "name": "podložka na valkanie cesta + valček",
+                "assigned": true
+            },
+            {
+                "id": 10,
+                "name": "príjemná deka (jednofarebná)",
+                "assigned": true
+            },
+            {
+                "id": 12,
+                "name": "rozkladací sušiak na prádlo",
+                "assigned": true
+            },
+            {
+                "id": 15,
+                "name": "rýchlovarná kanvica",
+                "assigned": true
+            },
+            {
+                "id": 23,
+                "name": "sada do kuchyne (škrabka, naberačka, varecha, metlička, ...)",
+                "assigned": true
+            },
+            {
+                "id": 9,
+                "name": "sada nožov",
+                "assigned": true
+            },
+            {
+                "id": 22,
+                "name": "spoločenská hra alebo puzzle",
+                "assigned": true
+            },
+            {
+                "id": 20,
+                "name": "strojček na vlasy",
+                "assigned": true
+            },
+            {
+                "id": 18,
+                "name": "toastovač",
+                "assigned": true
+            },
+            {
+                "id": 8,
+                "name": "uteráky a osušky",
+                "assigned": true
+            },
+            {
+                "id": 11,
+                "name": "utierky na riad",
+                "assigned": true
+            },
+            {
+                "id": 21,
+                "name": "vykrajovačky na cesto",
+                "assigned": true
+            },
+            {
+                "id": 25,
+                "name": "zapekacia misa",
+                "assigned": true
+            },
+            {
+                "id": 24,
+                "name": "žehlička",
+                "assigned": true
+            }
+        ];
 
-        people = {};
-        $.ajax({url: "https://squid-app-tljtj.ondigitalocean.app/people", success: function(result){
-            people = JSON.parse(result);
-            update_people();
-        }});
+        update_items();
+        //$.ajax({
+        //    url: "https://squid-app-tljtj.ondigitalocean.app/items", success: function (result) {
+        //        items = JSON.parse(result);
+        //        update_items();
+        //    }
+        //});
 
-        function change_item(item) {
-            const item_id = item.id;
-            $.ajax({url: `https://squid-app-tljtj.ondigitalocean.app/change_item/${item_id}`, success: function(result){
-                items = JSON.parse(result);
-                update_items();
-            }});
-        }
+        people = [
+            {
+                "id": 52,
+                "name": "Adam Majo",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 4,
+                "name": "Alžbetka Hajičková",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 6,
+                "name": "Babka Marcelka",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 5,
+                "name": "Babka a dedko Gubánioví",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 8,
+                "name": "Baška Holeková",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 10,
+                "name": "Brestovanskí",
+                "count": 4,
+                "confirmed": true
+            },
+            {
+                "id": 11,
+                "name": "Bruno Sagan",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 7,
+                "name": "Bára Komorná",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 12,
+                "name": "Čechovičoví",
+                "count": 4,
+                "confirmed": true
+            },
+            {
+                "id": 21,
+                "name": "Chmeloví",
+                "count": 4,
+                "confirmed": true
+            },
+            {
+                "id": 14,
+                "name": "Dominik Počuch",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 15,
+                "name": "Feketoví",
+                "count": 3,
+                "confirmed": true
+            },
+            {
+                "id": 16,
+                "name": "Filip G. + Dianka + Sárka",
+                "count": 3,
+                "confirmed": true
+            },
+            {
+                "id": 17,
+                "name": "Grossmannoví (Andrej)",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 18,
+                "name": "Hradskí (Janko)",
+                "count": 3,
+                "confirmed": true
+            },
+            {
+                "id": 19,
+                "name": "Hradskí (Števo)",
+                "count": 4,
+                "confirmed": true
+            },
+            {
+                "id": 20,
+                "name": "Hrozáňoví",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 22,
+                "name": "Jaborníkoví",
+                "count": 6,
+                "confirmed": true
+            },
+            {
+                "id": 23,
+                "name": "Jakub Gubáni",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 47,
+                "name": "Jakub Ivančík",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 25,
+                "name": "Janko Fekete",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 36,
+                "name": "Ján Behula",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 24,
+                "name": "Ján Holubčík SDB",
+                "count": 0,
+                "confirmed": false
+            },
+            {
+                "id": 27,
+                "name": "Krstný Lacko + Janka",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 48,
+                "name": "Lucia G. + Martin",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 28,
+                "name": "Majka Vlčeková",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 31,
+                "name": "Martin Krajčovič",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 30,
+                "name": "Mária Š. + Martin",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 29,
+                "name": "Mária Švorcová",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 26,
+                "name": "Nemčovičoví",
+                "count": 3,
+                "confirmed": true
+            },
+            {
+                "id": 37,
+                "name": "Pavlíkoví",
+                "count": 7,
+                "confirmed": true
+            },
+            {
+                "id": 46,
+                "name": "Peťo G. + Barbarka + Oliverko",
+                "count": 3,
+                "confirmed": true
+            },
+            {
+                "id": 38,
+                "name": "Pősoví",
+                "count": 8,
+                "confirmed": true
+            },
+            {
+                "id": 49,
+                "name": "Pősoví (Martin)",
+                "count": 0,
+                "confirmed": false
+            },
+            {
+                "id": 51,
+                "name": "Pősoví (Ondrej)",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 50,
+                "name": "Pősoví (Peťo)",
+                "count": 3,
+                "confirmed": true
+            },
+            {
+                "id": 9,
+                "name": "Rasťo a Bea Bráblikoví",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 39,
+                "name": "Samo Kňažko",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 41,
+                "name": "Terka Kňažková",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 40,
+                "name": "Šarmíroví",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 35,
+                "name": "Valachoví",
+                "count": 0,
+                "confirmed": false
+            },
+            {
+                "id": 42,
+                "name": "Vandákoví",
+                "count": 3,
+                "confirmed": true
+            },
+            {
+                "id": 44,
+                "name": "Zuzka Dzureková",
+                "count": 1,
+                "confirmed": true
+            },
+            {
+                "id": 45,
+                "name": "Zuzka Stojkovič + doprovod",
+                "count": 2,
+                "confirmed": true
+            },
+            {
+                "id": 43,
+                "name": "Záleskí",
+                "count": 2,
+                "confirmed": true
+            }
+        ];
 
-        function change_person(person) {
-            const person_id = person.id;
-            $.ajax({url: `https://squid-app-tljtj.ondigitalocean.app/change_person/${person_id}`, success: function(result){
-                people = JSON.parse(result);
-                update_people();
-            }});
-        }
+        update_people();
+        // $.ajax({
+        //     url: "https://squid-app-tljtj.ondigitalocean.app/people", success: function (result) {
+        //         people = JSON.parse(result);
+        //         update_people();
+        //     }
+        // });
 
-        function change_person_count(person) {
-            const person_id = person.id;
-            const count = person.value ? person.value : 0;
-            $.ajax({url: `https://squid-app-tljtj.ondigitalocean.app/change_person_count/${person_id}/${count}`, success: function(result){
-                people = JSON.parse(result);
-                update_people();
-            }});
-        }
+        // function change_item(item) {
+        //     const item_id = item.id;
+        //     $.ajax({
+        //         url: `https://squid-app-tljtj.ondigitalocean.app/change_item/${item_id}`, success: function (result) {
+        //             items = JSON.parse(result);
+        //             update_items();
+        //         }
+        //     });
+        // }
+
+        // function change_person(person) {
+        //     const person_id = person.id;
+        //     $.ajax({
+        //         url: `https://squid-app-tljtj.ondigitalocean.app/change_person/${person_id}`, success: function (result) {
+        //             people = JSON.parse(result);
+        //             update_people();
+        //         }
+        //     });
+        // }
+
+        // function change_person_count(person) {
+        //     const person_id = person.id;
+        //     const count = person.value ? person.value : 0;
+        //     $.ajax({
+        //         url: `https://squid-app-tljtj.ondigitalocean.app/change_person_count/${person_id}/${count}`, success: function (result) {
+        //             people = JSON.parse(result);
+        //             update_people();
+        //         }
+        //     });
+        // }
 
         function update_items() {
             let table = document.querySelector(".gifts-opened-item table tbody");
             let template = "";
             items.forEach(e => {
                 template += `<tr>
-                                <td class="border border-r-0 border-[#6C5C44] pl-2 py-1"><p>${e.name}</p></td>
-                                <td class="border border-l-0 border-[#6C5C44]">
-                                    <input type="checkbox" name="" id="${e.id}" ${e.assigned ? "checked" : ""} onchange="change_item(this)">
-                                </td>
-                            </tr>`
+                            <td class="border border-r-0 border-[#6C5C44] pl-2 py-1"><p>${e.name}</p></td>
+                            <td class="border border-l-0 border-[#6C5C44]">
+                                <input type="checkbox" name="" id="${e.id}" checked="${e.assigned}">
+                            </td>
+                        </tr>`
             });
             table.innerHTML = template;
         }
@@ -347,14 +718,14 @@
             let template = "";
             people.forEach(e => {
                 template += `   <tr>
-                                    <td class="border border-r-0 border-[#6C5C44] px-2 py-1"><p>${e.name}</p></td>
-                                    <td class="border border-l-0 border-[#6C5C44] px-2">
-                                        <input type="checkbox" name="" id="${e.id}" ${e.confirmed ? "checked" : ""} onchange="change_person(this)">
-                                    </td>
-                                    <td class="border border-[#6C5C44]">
-                                        <input class="max-w-[5rem] text-center ${e.confirmed && !e.count ? "error": ""}" type="text" id="${e.id}" value="${e.count ? e.count : ""}" onchange="change_person_count(this)">
-                                    </td>
-                                </tr>`;
+                                <td class="border border-r-0 border-[#6C5C44] px-2 py-1"><p>${e.name}</p></td>
+                                <td class="border border-l-0 border-[#6C5C44] px-2">
+                                    <input type="checkbox" name="" id="${e.id}" checked="${e.confirmed}">
+                                </td>
+                                <td class="border border-[#6C5C44]">
+                                    <input class="max-w-[5rem] text-center ${e.confirmed && !e.count ? 'error' : ""}" type="text" id="${e.id}" value="${e.count ? e.count : ''}">
+                                </td>
+                            </tr>`;
             });
             table.innerHTML = template;
         }
